@@ -1,0 +1,14 @@
+{
+  "name": "fcc-backend-dev-url-shortener-microservice",
+  "version": "1.0.0",
+  "main": "index.js",
+  "repository": "https://github.com/jpetersun/fcc-backend-dev-url-shortener-microservice.git",
+  "author": "James Peterson <jpeterson@einsteinmedical.com>",
+  "license": "MIT",
+  "dependencies": {
+    "express": "^4.16.3"
+  },
+  "scripts": {
+    "start": "node index.js"
+  }
+}
