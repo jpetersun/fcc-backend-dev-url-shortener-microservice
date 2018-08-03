@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <link rel="stylesheet" href="/styles.css">
+  <title>FCC URL Shortener Microservice</title>
+</head>
+<body>
+  <h2>URL Shortener Microservice</h2>
+  <p>POST a URL to <code>https://fcc-url-shortener-microservice-jp.glitch.me/api/shorturl/new</code> and receive a shortened URL in the JSON response. Visiting the shortened URL will redirect to the original URL.
+  <h4>Example Output:</h4>
+  <pre><code>
+  {
+    originalUrl: "https://google.com",
+    shortUrl: "http://tinyurl.com/mbq3m"
+  }
+  </code></pre>
+  <p>An invalid URL that doesn't follow the http(s)://www.example.com(/more/routes) format, the JSON response will contain an error.
+  <h4>Example Error:</h4>
+  <pre><code>
+  {
+    statusCode: 400,
+    error: "Bad Request",
+    message: "invalid URL"
+  }
+  </code></pre>
+  </p>
+  <h3>Usage:</h3>
+  <div class="form-wrapper">
+    <form action="api/shorturl/new" method="POST">
+      <p>URL to be shortened</p>
+      <input type="text" name="originalUrl" value="https://google.com">
+      <button type="submit">POST URL</button>
+    </form>
+  </div>
+</body>
+</html>
